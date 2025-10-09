@@ -89,12 +89,12 @@ Modeling ozone concentration as a linear function of solar radiation.
 
 Interpretation:
 
-* $\beta_1 > 0 $: ozone rises with radiation.
-* $ R^2 = 0.64 $: 64 % of ozone variability explained.
+* $\beta_1 > 0$: ozone rises with radiation.
+* $ R^2 = 0.64 $: $64 \%$ of ozone variability explained.
 
 #### 4.2 Multiple Linear Regression
 
-$
+$$
 y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \epsilon
 $$
 
