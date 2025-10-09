@@ -1,1 +1,1 @@
-# Two-way ANOVA, blocking, and factorial designs
+# One way and Two-way ANOVA, blocking, and factorial designs
