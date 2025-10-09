@@ -73,15 +73,15 @@ Minute-to-minute fluctuations in wind speed from turbulence.
 When multiple uncertain quantities are combined, their uncertainties also combine.
 For small uncertainties and independent variables, the **error propagation formula** applies:
 
-[
+$$
 \sigma_f^2 = \sum_i \left(\frac{\partial f}{\partial x_i}\right)^2 \sigma_i^2
-]
+$$
 
 Where:
 
-* ( f ) is the derived quantity (e.g., relative humidity)
-* ( x_i ) are the measured variables (e.g., temperature, dew point)
-* ( \sigma_i ) are their standard deviations
+* $( f )$ is the derived quantity (e.g., relative humidity)
+* $( x_i )$ are the measured variables (e.g., temperature, dew point)
+* $( \sigma_i )$ are their standard deviations
 
 **Example:**
 If relative humidity depends on temperature and vapor pressure, both their errors contribute to RH uncertainty.
@@ -152,7 +152,7 @@ Common statistical measures used to report and visualize uncertainty include:
 | **Standard deviation (σ)**        | Spread of repeated measurements                   | Instrument precision            |
 | **Standard error (SE)**           | σ / √n                                            | Confidence in sample mean       |
 | **Confidence interval (CI)**      | Range containing true mean with given probability | Trend estimates                 |
-| **Root Mean Square Error (RMSE)** | (\sqrt{\frac{1}{N}\sum_i (x_i - y_i)^2})          | Comparing model vs observations |
+| **Root Mean Square Error (RMSE)** | $(\sqrt{\frac{1}{N}\sum_i (x_i - y_i)^2})$          | Comparing model vs observations |
 | **Bias**                          | Mean difference between measurement and truth     | Calibration quality             |
 | **Coefficient of Variation (CV)** | (σ / mean) × 100                                  | Relative uncertainty            |
 
@@ -203,11 +203,11 @@ When doing statistical analysis, these flags should always be used to **filter o
 * Apply **weighted least squares** when combining datasets with different error variances.
 
 For example:
-[
+$$
 y = \beta_0 + \beta_1 x + \epsilon, \quad \text{where } \text{Var}(\epsilon_i) = \sigma_i^2
-]
+$$
 
-Weights ( w_i = 1 / \sigma_i^2 ) give more influence to higher-quality data.
+Weights $( w_i = 1 / \sigma_i^2 )$ give more influence to higher-quality data.
 
 ---
 
@@ -227,7 +227,3 @@ Weights ( w_i = 1 / \sigma_i^2 ) give more influence to higher-quality data.
 * Rodgers, C. D. (2000). *Inverse Methods for Atmospheric Sounding: Theory and Practice*.
 * Emery, W. J. & Thomson, R. E. (2017). *Data Analysis Methods in Physical Oceanography*.
 * Wilks, D. S. (2019). *Statistical Methods in the Atmospheric Sciences*.
-
----
-
-Would you like me to continue with **Chapter 3: Statistical Distributions in Atmospheric Data** next — where we’ll dive into Gaussian vs. non-Gaussian distributions, skewness, heavy tails, and why atmospheric variables (like rainfall or aerosol optical depth) rarely behave “normally”?
