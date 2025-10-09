@@ -203,6 +203,7 @@ When doing statistical analysis, these flags should always be used to **filter o
 * Apply **weighted least squares** when combining datasets with different error variances.
 
 For example:
+
 $$
 y = \beta_0 + \beta_1 x + \epsilon, \quad \text{where } \text{Var}(\epsilon_i) = \sigma_i^2
 $$
