@@ -76,11 +76,11 @@ While correlation measures association, **regression** *models* how one variable
 
 #### 4.1 Simple Linear Regression
 
-$
+$$
 y = \beta_0 + \beta_1 x + \epsilon
 $$
 
-* $ \beta_0$ = intercept, $ \beta_1$ = slope.
+* $\beta_0$ = intercept, $ \beta_1$ = slope.
 * $R^2$ measures proportion of variance in $Y$ explained by $X$.
 * Test slope significance with $p-$value.
 
