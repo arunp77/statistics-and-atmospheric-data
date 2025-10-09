@@ -189,8 +189,6 @@ For temporal atmospheric datasets:
 
 ---
 
-[Hands on practice notebook](08_uncertainty_quantification_and_model_evaluation.ipynb)
-
-I can also create a **Jupyter notebook** for this chapter with full **hands-on exercises** including linear regression, Random Forests, SVM, feature importance, and model evaluation for students.
-
-Do you want me to make that notebook next?
+[Hands on practice notebook](09_machine_learning_and_statistical_modelling_in_atmospheric_studies.ipynb)
+[Hands on practice notebook for interactive analysis](09_machine_learning_and_statistical_interactive.ipynb)
+[To analyze chapter 8 and 9 together interactively](08_09_combined_interactive_atmoshpheric_analysis.ipynb)
