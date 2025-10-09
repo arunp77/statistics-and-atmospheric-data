@@ -25,33 +25,35 @@ Understanding these distributions helps you:
 A **probability distribution** describes how likely different values of a variable are.
 
 For continuous atmospheric variables, we define a **probability density function (PDF)**:
-[
+
+$$
 \int_{-\infty}^{\infty} f(x) , dx = 1
-]
+$$
 
 Where:
 
-* ( f(x) ) is the probability density
+* $f(x)$ is the probability density
 * The area under the curve between two points gives the probability of finding a value in that range
 
 Atmospheric examples:
 
-* ( f(T) ): temperature distribution
-* ( f(P) ): precipitation amount per day
-* ( f(AOD) ): aerosol optical depth
+* $f(T) $: temperature distribution
+* $ f(P)$: precipitation amount per day
+* $f(AOD) $: aerosol optical depth
 
 ---
 
 ### 3. The Normal (Gaussian) Distribution
 
 The **Normal Distribution** is central to classical statistics:
-[
+
+$$
 f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left[-\frac{(x-\mu)^2}{2\sigma^2}\right]
-]
+$$
 
 **Key properties:**
 
-* Symmetric around the mean ( \mu )
+* Symmetric around the mean $\mu$ 
 * Characterized entirely by mean and standard deviation
 * The “68–95–99.7 rule”:
   68% of data within 1σ, 95% within 2σ, 99.7% within 3σ
@@ -83,8 +85,8 @@ To quantify how a distribution deviates from normality, we use two higher-order 
 
 | Metric       | Definition                              | Interpretation                                                 |
 | ------------ | --------------------------------------- | -------------------------------------------------------------- |
-| **Skewness** | ( \frac{E[(x - \mu)^3]}{\sigma^3} )     | Positive → right tail (e.g., rainfall); Negative → left tail   |
-| **Kurtosis** | ( \frac{E[(x - \mu)^4]}{\sigma^4} - 3 ) | >0 = heavy tails (leptokurtic); <0 = light tails (platykurtic) |
+| **Skewness** | $( \frac{E[(x - \mu)^3]}{\sigma^3} )$     | Positive → right tail (e.g., rainfall); Negative → left tail   |
+| **Kurtosis** | $( \frac{E[(x - \mu)^4]}{\sigma^4} - 3 ) | >0 $ = heavy tails (leptokurtic); <0 = light tails (platykurtic) |
 
 **Example:**
 
@@ -99,7 +101,7 @@ Plotting PDFs or histograms is the first visual clue to such behavior.
 
 Atmospheric composition often varies over **orders of magnitude** — multiplicative processes (emission, growth, scavenging) yield **log-normal** distributions.
 
-If ( X ) is log-normally distributed, then ( \ln(X) ) is normal.
+If $X$ is log-normally distributed, then $\ln(X) $ is normal.
 
 **Properties:**
 
@@ -120,15 +122,16 @@ Always visualize both *linear* and *log* histograms before fitting.
 ### 7. The Gamma and Exponential Distributions: Rainfall and Waiting Times
 
 **Gamma distribution:**
-[
-f(x; k, \theta) = \frac{1}{\Gamma(k)\theta^k} x^{k-1} e^{-x/\theta}
-]
 
-* ( k ) = shape parameter
-* ( \theta ) = scale parameter
+$$
+f(x; k, \theta) = \frac{1}{\Gamma(k)\theta^k} x^{k-1} e^{-x/\theta}
+$$
+
+* $k $ = shape parameter
+* $\theta $ = scale parameter
 * Commonly used for **rainfall intensities**, **precipitation accumulation**, **cloud water content**
 
-When ( k = 1 ), the gamma becomes **exponential**, useful for **time-between-events**, like dry spells or lightning intervals.
+When $k = 1 $, the gamma becomes **exponential**, useful for **time-between-events**, like dry spells or lightning intervals.
 
 These distributions help define **return periods** for extreme weather.
 
@@ -137,14 +140,15 @@ These distributions help define **return periods** for extreme weather.
 ### 8. The Weibull Distribution: Wind Speed Modeling
 
 Wind speed is inherently non-negative and asymmetrical — best modeled by **Weibull**:
-[
+
+$$
 f(x; k, c) = \frac{k}{c}\left(\frac{x}{c}\right)^{k-1} e^{-(x/c)^k}
-]
+$$
 
 Where:
 
-* ( k ) = shape parameter
-* ( c ) = scale parameter
+* $k$= shape parameter
+* $c$ = scale parameter
 
 Applications:
 
@@ -152,7 +156,7 @@ Applications:
 * Turbine energy potential estimation
 * Extreme gust probability
 
-A typical surface wind dataset fits ( k ≈ 2 ), ( c ≈ 7 ) m/s.
+A typical surface wind dataset fits $k \approx 2 $, $ c \approx 7 $ m/s.
 
 ---
 
@@ -181,10 +185,12 @@ Atmospheric datasets often come from **multiple regimes**:
 
 The combined PDF may appear **multimodal** — e.g., two peaks in temperature distribution.
 Statistically, these can be modeled by **mixture models**:
-[
+
+$$
 f(x) = \sum_i w_i f_i(x)
-]
-where each ( f_i(x) ) is a component (e.g., Gaussian for each regime).
+$$
+
+where each $f_i(x)$ is a component (e.g., Gaussian for each regime).
 
 **Application:**
 Classifying air masses or aerosol types.
