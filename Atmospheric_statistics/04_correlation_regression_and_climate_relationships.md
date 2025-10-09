@@ -101,6 +101,7 @@ $$
 Useful when several predictors influence one variable.
 
 Example:
+
 $$
 \text{O₃} = \beta_0 + \beta_1 (\text{T}) + \beta_2 (\text{NO₂}) + \beta_3 (\text{Wind}) + \epsilon
 $$
