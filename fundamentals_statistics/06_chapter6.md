@@ -1,11 +1,6 @@
-# Hypothesis testing (t-test, chi-square, F-test)
-
-
 # Inferential Statistics
 
-- Descriptive statistics is the branch of statistics that deals with the collection, analysis, and interpretation of data from a sample or population. It involves summarizing and describing the main features of the data, such as measures of central tendency (e.g., mean, median, mode) and measures of dispersion (e.g., range, variance, standard deviation). Descriptive statistics aims to provide a clear and concise summary of the data that can be easily understood and communicated to others.
-
-- Inferential statistics, on the other hand, is the branch of statistics that deals with drawing conclusions or making predictions about a larger population based on a sample of data. It involves using probability theory to estimate population parameters (e.g., mean, proportion) from sample statistics (e.g., sample mean, sample proportion) and testing hypotheses about the relationship between variables. Inferential statistics aims to make generalizations about the population based on the information obtained from the sample.`
+Inferential statistics, on the other hand, is the branch of statistics that deals with drawing conclusions or making predictions about a larger population based on a sample of data. It involves using probability theory to estimate population parameters (e.g., mean, proportion) from sample statistics (e.g., sample mean, sample proportion) and testing hypotheses about the relationship between variables. Inferential statistics aims to make generalizations about the population based on the information obtained from the sample.`
 
 ### Main uses of the Inferential statistics
 
@@ -29,45 +24,17 @@ Overall, inferential statistics allows researchers to draw conclusions about pop
 | Useful in describing and summarizing data	| Helps in making predictions about future observations or outcomes |
 | Examples: frequency distributions, measures of central tendency, measures of dispersion, etc.	| Examples: t-tests, ANOVA, regression analysis, etc. |
 
-### Sampling error in inferential statistics
-
-- Since the size of a sample is always smaller than the size of the population, some of the population isn’t captured by sample data. This creates sampling error, which is the difference between the true population values (called parameters) and the measured sample values (called statistics).
-
-- Sampling error arises any time you use a sample, even if your sample is random and unbiased. For this reason, there is always some uncertainty in inferential statistics. However, using probability sampling methods reduces this uncertainty.
-
-### Estimating population parameters from sample statistics
-
-The characteristics of samples and populations are described by numbers called statistics and parameters:
-
-- A statistic is a measure that describes the sample (e.g., sample mean).
-- A parameter is a measure that describes the whole population (e.g., population mean).
-
-**Sampling error** is the difference between a parameter and a corresponding statistic. Since in most cases you don’t know the real population parameter, you can use inferential statistics to estimate these parameters in a way that takes sampling error into account.
-
-**Types of estimates:** There are two important types of estimates you can make about the population: 
+### Types of estimates
+There are two important types of estimates you can make about the population: 
 
 1. **Point estimates:** A point estimate is a single value estimate of a parameter. For instance, a sample mean is a point estimate of a population mean.
 2. **Interval estimates:** An interval estimate gives you a range of values where the parameter is expected to lie. A confidence interval is the most common type of interval estimate.
 
 Both types of estimates are important for gathering a clear idea of where a parameter is likely to lie.
 
-### Steps to follow to eastimate the population parameters from sample statistics
-
-The following steps outline the process of estimating population parameters from sample statistics:
-
-- **Define the population of interest:** Clearly define the population from which the sample is drawn.
-- **Determine the sampling technique:** Determine the sampling technique to be used to ensure that the sample is representative of the population.
-- **Collect the sample:** Collect a sample of appropriate size from the population using the chosen sampling technique.
-- **Calculate sample statistics:** Calculate the appropriate sample statistics (e.g., mean, standard deviation) based on the collected sample.
-- **Make inferences:** Use the sample statistics to make inferences about the population parameters (e.g., mean, standard deviation).
-- **Estimate population parameters:** Use the sample statistics to estimate the population parameters, including point estimates and confidence intervals.
-- **Assess the reliability of the estimate:** Determine the reliability of the estimate using statistical tests such as hypothesis testing and confidence intervals.
-
-Overall, estimating population parameters from sample statistics involves collecting a representative sample, calculating sample statistics, and using these statistics to make inferences about the population parameters. The process requires careful consideration of the sampling technique, sample size, and reliability of the estimates.
-
 ---
 
-### Hypothesis testing
+## Hypothesis testing
 
 - Hypothesis testing is a formal process of statistical analysis using inferential statistics. The goal of hypothesis testing is to compare populations or assess relationships between variables using samples. 
 
@@ -93,8 +60,8 @@ Overall, estimating population parameters from sample statistics involves collec
         * **Kruskal-Wallis test:** Used to compare the medians of three or more groups when the data are not normally distributed.
         * **Spearman correlation coefficient:** Used to measure the strength and direction of the monotonic relationship between two continuous variables when the data are not normally distributed.
 
-
-- Statistical tests come in three forms: 
+## Various kind of hypothesis testing
+Statistical tests come in three forms: 
 1. **comparison test:** Comparison tests assess whether there are differences in means, medians or rankings of scores of two or more groups. To decide which test suits your aim, consider whether your data meets the conditions necessary for parametric tests, the number of samples, and the levels of measurement of your variables.
     
 | Comparison test	| Parametric?	| What’s being compared?	| Samples |
@@ -125,59 +92,52 @@ Overall, estimating population parameters from sample statistics involves collec
 | Ordinal regression	| 1+ any variable(s)	| 1 ordinal variable |
 
 
+### Step-by-Step Guide to Hypothesis Testing
+
+> **note:** Please note that a detailed description on various kind of test statistics are given in chapter 8.
+
+1. **Formulate Hypotheses**
+
+   * **Null (H₀):** No effect or difference.
+   * **Alternative (Hₐ):** There is an effect or difference.
+     *Example:* H₀: Drug = Placebo, Hₐ: Drug ≠ Placebo.
+
+    <a href="#null-and-alternative-hypothesis" style="display:inline-block;padding:5px 10px;background-color:#337ab7;color:#fff;text-decoration:none;border-radius:5px;font-size:14px;">Go to detailed section</a>
+
+2. **Choose Significance Level (α)**
+
+   * Commonly α = 0.05, the probability of rejecting H₀ when it’s true.
+
+   <a href="#significance-level" style="display:inline-block;padding:5px 10px;background-color:#337ab7;color:#fff;text-decoration:none;border-radius:5px;font-size:14px;">Go to detailed section</a>
+
+3. **Select a Statistical Test**
+
+   * Depends on data type and research question.
+   * Examples: t-test (2 groups), ANOVA (3+ groups), z-test (large sample or known σ).
+
+    <a href="#selecting-a-appropriate-statistical-test" style="display:inline-block;padding:5px 10px;background-color:#337ab7;color:#fff;text-decoration:none;border-radius:5px;font-size:14px;">Go to detailed section</a>
+
+4. **Calculate Test Statistic**
+
+   * **t-test:** $t = \frac{\bar{x} - \mu}{s/\sqrt{n}}$
+   * **z-test:** $z = \frac{\bar{x} - \mu}{\sigma/\sqrt{n}}$
+   * Measures how far the sample is from H₀ in standard error units.
+
+5. **Compute p-value**
+
+   * Probability of observing data as extreme as the sample, assuming H₀ is true.
+   * **p < α:** Reject H₀ (significant).
+   * **p ≥ α:** Fail to reject H₀ (not significant).
+
+6. **Interpret Results**
+
+   * **Significant:** Evidence against H₀.
+   * **Not significant:** Insufficient evidence to reject H₀.
 
 ---
 
-### Step-by-step guide to hypothesis testing
-
-Here's a step-by-step guide to hypothesis testing:
-
-1. **Formulate the null and alternative hypotheses**: 
-
-    The null hypothesis (denoted $H_0$) is the hypothesis that there is no significant difference between two or more groups, or no significant relationship between two or more variables. The alternative hypothesis (denoted $H_a$) is the hypothesis that there is a significant difference or relationship. 
-    - For example, in a clinical trial, the null hypothesis might be that there is no difference in effectiveness between a new drug and a placebo, while the alternative hypothesis might be that the new drug is more effective than the placebo. 
-    - <a href="#null-and-alternative-hypothesis" style="display:inline-block;padding:5px 10px;background-color:#337ab7;color:#fff;text-decoration:none;border-radius:5px;font-size:14px;">Go to detailed section</a>
-
-2. **Choose a significance level:** The significance level (denoted $\alpha$) is the probability of rejecting the null hypothesis when it is actually true. The most common significance level used in hypothesis testing is 0.05 (or 5%). 
-    - <a href="#significance-level" style="display:inline-block;padding:5px 10px;background-color:#337ab7;color:#fff;text-decoration:none;border-radius:5px;font-size:14px;">Go to detailed section</a>
-
-3. **Select an appropriate statistical test:** The choice of statistical test depends on the type of data and the research question. For example, a t-test might be used to compare the means of two groups, while ANOVA might be used to compare the means of three or more groups.
-    - <a href="#selecting-a-appropriate-statistical-test" style="display:inline-block;padding:5px 10px;background-color:#337ab7;color:#fff;text-decoration:none;border-radius:5px;font-size:14px;">Go to detailed section</a>
-
-4. **Calculate the test statistic:** In hypothesis testing, the test statistic is a numerical value calculated from the sample data that is used to assess the evidence against the null hypothesis. The test statistic measures how far the sample estimate is from the null hypothesis value in terms of the standard error of the estimate. The choice of test statistic depends on the type of data and the assumptions of the statistical test. The formula for the test statistic depends on the specific test being used. 
-
-    - For example, in a t-test, the test statistic is calculated as: 
-    
-        $$t = \frac{(\bar{x} - \mu)}{s/\sqrt{n}}$$
-        where $x̄$ is the sample means, $\mu$ is the hypothesized population mean, $s$ is the sample standard deviation, and $n$ is the sample size. The t-test produces a t-value, which is compared to a critical value from the t-distribution based on the degrees of freedom and the desired significance level.
-    - The z-test, on the other hand, is used when the population standard deviation is known or when the sample size is large (typically $n\geq 30$). The formula for the z-test is:
-    
-        $$z = \frac{x̄ - μ}{\sigma/\sqrt{n}}$$
-        
-        where $\bar{x}$ is the sample mean, $\mu$ is the hypothesized population mean, $\sigma$ is the population standard deviation, and $n$ is the sample size. The z-test produces a z-value, which is compared to a critical value from the standard normal distribution based on the desired significance level.
-
-    Both the t-test and z-test are used to test hypotheses about the population mean based on sample data. The choice between the two tests depends on the nature of the data and the sample size. If the population standard deviation is unknown and the sample size is small, the t-test is appropriate. If the population standard deviation is known or the sample size is large, the z-test is appropriate.
-
-5. **Calculate the p-value:** The p-value is the probability of obtaining a test statistic as extreme as, or more extreme than, the observed test statistic, assuming the null hypothesis is true. The p-value is calculated based on the distribution of the test statistic under the null hypothesis. If the p-value is less than the significance level (α), the null hypothesis is rejected in favor of the alternative hypothesis.
-    - To calculate the p-value, we need to compare the test statistic to its sampling distribution under the null hypothesis. "_The p-value is the area under the sampling distribution curve that is more extreme than the observed test statistic._" 
-        - If the p-value is small (typically less than the significance level), it indicates that the observed data is unlikely to have occurred by chance alone, and the null hypothesis should be rejected in favor of the alternative hypothesis.
-
-    - The exact calculation of the p-value depends on the type of test and the distribution of the test statistic under the null hypothesis. For example, 
-        - in a t-test, the p-value can be calculated using the t-distribution with n-1 degrees of freedom, where n is the sample size. - In a z-test, the p-value can be calculated using the standard normal distribution. 
-        - In other tests, such as the chi-square test or F-test, the p-value is calculated using the chi-square or F distribution, respectively.
-
-    - In general, the smaller the p-value, the stronger the evidence against the null hypothesis. 
-        - A p-value less than the significance level (usually 0.05 or 0.01) indicates that the result is statistically significant and that the null hypothesis should be rejected. 
-        - A p-value greater than the significance level indicates that the result is not statistically significant, and the null hypothesis should not be rejected.
-
-    - In summary, the p-value measures the strength of evidence against the null hypothesis and is calculated by comparing the test statistic to its sampling distribution under the null hypothesis. The exact calculation of the p-value depends on the type of test and the distribution of the test statistic under the null hypothesis. A small p-value indicates that the result is statistically significant and that the null hypothesis should be rejected.
-
-6. **Interpret the results:** If the p-value is less than the significance level, the result is considered statistically significant, and the null hypothesis is rejected. If the p-value is greater than the significance level, the result is not considered statistically significant, and the null hypothesis cannot be rejected.
-
-
----
-
-**Example:** To illustrate this process, let's consider an example: 
+#### Example
+To illustrate this process, let's consider an example: 
 
 Suppose we want to test whether there is a difference in the average height of men and women. We collect a sample of 100 men and 100 women, and measure their heights. We want to test the null hypothesis that there is no difference in height between men and women, against the alternative hypothesis that there is a difference.
 
@@ -216,74 +176,153 @@ This example illustrates how hypothesis testing can be used to draw conclusions 
 
 ## [Null and Alternative hypothesis](#null-and-alternative-hypothesis)
 
-Formulating the null and alternative hypotheses is a critical step in hypothesis testing.
+Formulating the null and alternative hypotheses is a **critical first step in hypothesis testing**.
 
-1. **Null hypothesis ($H_0$)**: The null hypothesis ($H_0$) is the statement that there is no significant difference or relationship between the variables being studied. 
-2. **Alternative hypothesis ($H_a$ or $H_1$)** is the statement that there is a significant difference or relationship between the variables.
+## 1. Null Hypothesis (H₀)
 
-- In statistical testing, the null hypothesis is assumed to be true until there is evidence to the contrary. The alternative hypothesis represents the researcher's hypothesis or the hypothesis they are trying to prove.
+* Statement that there is **no significant difference or relationship** between variables.
+* Assumed true until evidence suggests otherwise.
 
-- The null and alternative hypotheses must be mutually exclusive and collectively exhaustive. That means that they cover all possible outcomes and that there is no overlap between them. In other words, one of the hypotheses must be true, but not both.
+## 2. Alternative Hypothesis (Hₐ or H₁)
 
-- **Example:** suppose a researcher is interested in whether a new drug is effective in reducing blood pressure. They could formulate the null and alternative hypotheses as follows:
+* Statement that there **is a significant difference or relationship**.
+* Represents the research hypothesis or what the researcher aims to prove.
 
-    $H_0$: The new drug has no effect on blood pressure.
-        
-    $H_a$: The new drug has a significant effect on blood pressure.
+## Key Points
 
-    Alternatively, suppose a researcher is interested in whether there is a difference in job satisfaction between men and women. They could formulate the null and alternative hypotheses as follows:
+* **Mutually Exclusive:** Only one can be true.
+* **Collectively Exhaustive:** Together they cover all possibilities.
+* Can be **one-tailed** (predicts direction) or **two-tailed** (no direction predicted).
 
-    $H_0$: There is no significant difference in job satisfaction between men and women.
+## Examples
 
-    $H_a$: There is a significant difference in job satisfaction between men and women.
+1. **Drug Effect on Blood Pressure**
 
-    The null and alternative hypotheses can be one-tailed or two-tailed, depending on the direction of the expected difference or relationship between the variables. A one-tailed hypothesis predicts the direction of the effect (e.g., the new drug will lower blood pressure), while a two-tailed hypothesis does not predict the direction of the effect (e.g., there is a difference in job satisfaction between men and women).
+   * H₀: The new drug has no effect on blood pressure.
+   * Hₐ: The new drug has a significant effect on blood pressure.
 
-In summary, formulating the null and alternative hypotheses is a critical step in hypothesis testing, as it defines the research question and the direction of the analysis. The hypotheses must be mutually exclusive and collectively exhaustive, and their formulation depends on the research question and the expected relationship or difference between the variables being studied.
+2. **Job Satisfaction by Gender**
 
+   * H₀: No difference in job satisfaction between men and women.
+   * Hₐ: A significant difference exists in job satisfaction between men and women.
+
+> ✅ Summary: Properly formulating H₀ and Hₐ defines the **research question** and the **direction of analysis**. It ensures clarity in statistical testing.
 
 ---
 
 ## [Significance level ($\alpha$)](#significance-level)
 
-Choosing a significance level is another important step in hypothesis testing. The significance level, denoted by $\alpha$, is the probability of rejecting the null hypothesis when it is actually true. In other words, it is the probability of making a Type I error.
+The **significance level**, denoted by **α**, represents the **probability of rejecting the null hypothesis (H₀) when it is actually true** — also known as the **risk of making a Type I error** (false positive).
 
-- A Type I error occurs when we reject the null hypothesis when it is actually true. This is also known as a false positive. The significance level is therefore a measure of how willing we are to make a Type I error.
+---
 
-- The most commonly used significance level is 0.05, which means that we are willing to accept a 5% chance of making a Type I error. However, the significance level can be set to any value, depending on the researcher's preferences, the consequences of making a Type I error, and the strength of the evidence needed to reject the null hypothesis.
+## 🔹 What It Means
 
-- It is important to note that the choice of significance level is not independent of the sample size and the statistical power of the test. A smaller sample size or a weaker effect size may require a lower significance level to avoid Type I errors. On the other hand, a larger sample size or a stronger effect size may allow for a higher significance level.
+* **Type I Error:** Rejecting H₀ when it’s true.
+* **α Value:** The threshold for deciding whether to reject H₀.
+* **Common Choice:** α = 0.05 → 5% risk of Type I error.
 
-- To choose a significance level, researchers should consider the following factors:
+---
 
-    1. The consequences of making a Type I error: If the consequences of rejecting the null hypothesis when it is actually true are severe, a lower significance level should be chosen.
+## 🔹 Choosing α
 
-    2. The strength of the evidence needed to reject the null hypothesis: If strong evidence is required to reject the null hypothesis, a lower significance level should be chosen.
+The choice of α depends on:
 
-    3. The sample size and effect size: If the sample size is small or the effect size is weak, a lower significance level may be needed to avoid Type I errors.
+1. **Consequences of Type I Error:**
 
-In summary, choosing a significance level is a critical step in hypothesis testing that involves balancing the risk of Type I errors with the strength of evidence needed to reject the null hypothesis. The significance level is usually set to 0.05 but can be adjusted based on the research question, the consequences of making an error, and the characteristics of the data being analyzed.
+   * If the cost of a false positive is high → use smaller α (e.g., 0.01).
+2. **Strength of Evidence Needed:**
 
+   * Stricter studies require smaller α to ensure stronger proof.
+3. **Sample Size & Effect Size:**
+
+   * Small samples or weak effects → lower α to reduce error risk.
+   * Large samples or strong effects → slightly higher α acceptable.
+
+---
+
+## 🔹 Summary
+
+* α controls how strict your test is.
+* Smaller α → less chance of false positives but more chance of **Type II errors** (false negatives).
+* Typically set at **0.05**, but may vary (e.g., 0.01 or 0.10) based on the context.
+
+> ✅ **In short:**
+> The significance level (α) defines how much risk you’re willing to accept when deciding to reject the null hypothesis.
 
 ---
 
 ## [Selecting a appropriate statistical test](#selecting-a-appropriate-statistical-test)
 
-Selecting an appropriate statistical test is a crucial step in hypothesis testing. The choice of test depends on the nature of the research question, the type of data being analyzed, and the assumptions of the statistical test. Selecting the wrong test can lead to incorrect conclusions and can invalidate the results of the analysis.
-
-There are many different statistical tests available, and choosing the right one can be challenging. However, the following factors can guide the selection of an appropriate test:
-
-1. **Type of data:** The type of data being analyzed (e.g., continuous, categorical, ordinal) can determine the appropriate statistical test. For example, t-tests and ANOVA are appropriate for continuous data, while chi-squared tests are appropriate for categorical data.
-
-2. **Sample size:** The sample size can also influence the choice of test. For small sample sizes, nonparametric tests may be more appropriate, while for larger sample sizes, parametric tests may be more powerful.
-
-3. **Number of groups:** The number of groups being compared can also influence the choice of test. For example, t-tests are appropriate for comparing two groups, while ANOVA is appropriate for comparing three or more groups.
-
-4. **Assumptions of the test:** Most statistical tests have certain assumptions that must be met in order for the test to be valid. For example, t-tests assume that the data are normally distributed, while ANOVA assumes that the variances of the groups are equal. Violating these assumptions can lead to incorrect conclusions.
-
-5. **Research question:** Finally, the research question itself can guide the choice of test. For example, if the research question involves the relationship between two variables, a correlation or regression analysis may be appropriate.
-
-In summary, selecting an appropriate statistical test involves considering the type of data being analyzed, the sample size, the number of groups, the assumptions of the test, and the research question. By carefully selecting the appropriate test, researchers can ensure that their results are valid and can make meaningful conclusions from their data.
-
+Choosing the **appropriate statistical test** is critical to ensure valid and reliable results. The test depends on your **data type**, **sample characteristics**, and **research question**.
 
 ---
+
+## 🔹 Key Factors to Consider
+
+1. **Type of Data**
+
+   * **Continuous data:** Use tests like *t-test* or *ANOVA*.
+   * **Categorical data:** Use *Chi-square* or *Fisher’s exact test*.
+   * **Ordinal data:** Use nonparametric tests like *Mann–Whitney U* or *Kruskal–Wallis*.
+
+2. **Sample Size**
+
+   * **Small samples:** Prefer *nonparametric tests* (fewer assumptions).
+   * **Large samples:** Use *parametric tests* (more powerful).
+
+3. **Number of Groups**
+
+   * **Two groups:** *t-test* (independent or paired).
+   * **Three or more groups:** *ANOVA* or *Kruskal–Wallis*.
+
+4. **Test Assumptions**
+
+   * Normality → t-test, ANOVA.
+   * Equal variances → ANOVA.
+   * Violations → use nonparametric alternatives.
+
+5. **Research Question Type**
+
+   * **Comparing groups:** t-test, ANOVA.
+   * **Relationships:** Correlation or regression.
+   * **Associations (categorical):** Chi-square test.
+
+---
+
+## 🔹 Summary
+
+Selecting the right test depends on:
+
+> Data type ➜ Sample size ➜ Number of groups ➜ Assumptions ➜ Research question
+
+Choosing appropriately ensures **valid conclusions** and **statistical accuracy**.
+
+> ✅ **In short:** Pick the test that matches your data structure and research goal — the wrong test can invalidate your results.
+
+---
+
+## 🧠 Statistical Test Selection Guide
+
+| **Objective**                       | **Data Type**                   | **Groups / Variables**          | **Common Test(s)**              | **Notes / Assumptions**                    |
+| ----------------------------------- | ------------------------------- | ------------------------------- | ------------------------------- | ------------------------------------------ |
+| **Compare means (parametric)**      | Continuous                      | 2 independent groups            | **Independent t-test**          | Data normal, equal variances               |
+|                                     | Continuous                      | 2 related groups (before–after) | **Paired t-test**               | Normal difference scores                   |
+|                                     | Continuous                      | 3+ groups                       | **ANOVA (One-way)**             | Normal, equal variances                    |
+| **Compare medians (nonparametric)** | Ordinal / Non-normal continuous | 2 independent groups            | **Mann–Whitney U test**         | No normality assumption                    |
+|                                     | Ordinal / Non-normal continuous | 3+ groups                       | **Kruskal–Wallis test**         | Nonparametric ANOVA alternative            |
+| **Compare proportions**             | Categorical                     | 2+ categories                   | **Chi-square test**             | Expected freq ≥ 5                          |
+|                                     | Categorical                     | Small sample                    | **Fisher’s Exact Test**         | For small expected counts                  |
+| **Test relationships**              | Continuous                      | 2 variables                     | **Pearson correlation (r)**     | Linear, normal variables                   |
+|                                     | Continuous / Ordinal            | 2 variables                     | **Spearman correlation (ρ)**    | Nonlinear or ranked data                   |
+| **Predict a variable**              | Continuous (Y)                  | 1+ predictors                   | **Linear regression**           | Linearity, independence, homoscedasticity  |
+|                                     | Categorical (Y)                 | 1+ predictors                   | **Logistic regression**         | Binary or multinomial outcome              |
+| **Test goodness of fit**            | Categorical                     | 1 variable                      | **Chi-square goodness-of-fit**  | Compares observed vs. expected frequencies |
+| **Check variance equality**         | Continuous                      | 2+ groups                       | **Levene’s or Bartlett’s test** | Tests homogeneity of variances             |
+
+---
+
+> ✅ **Quick Tip:**
+>
+> * Use **parametric tests** when data are normally distributed and assumptions are met.
+> * Use **nonparametric tests** when data violate assumptions (skewed, ordinal, or small samples).

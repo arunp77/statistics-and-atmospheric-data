@@ -23,7 +23,7 @@ Regression test
 
 ---
 
-## 1. t-test
+## 1. Independent t-test
 
 The t-test is a statistical test used to determine if there is a significant difference between the means of two groups. There are two main types of t-tests: 
 1. the independent samples t-test and 
@@ -34,35 +34,44 @@ The independent samples t-test is used to compare the means of two independent g
 
 The formula for the independent samples t-test is:
 
-t = (x̄1 - x̄2) / (s√(1/n1 + 1/n2))
+$$
+t = \frac{\bar{X}_1 - \bar{X}_2}{s_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}
+$$
 
 Where:
-x̄1 and x̄2 are the means of the two groups
-s is the pooled standard deviation
-n1 and n2 are the sample sizes of the two groups
+- $\bar{x}_1$ and $\bar{x}_2$ are the means of the two groups
+- $s_p$ is the pooled standard deviation
+- $n_1$ and $n_2$ are the sample sizes of the two groups
+
+Here pooled standard deviation is defined as:
+
+$$
+s_p = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2}}
+$$
 
 The independent samples t-test assumes that the variances of the two groups are equal. If they are not, a modified version of the t-test called Welch's t-test can be used.
 
-Paired Samples t-Test:
+### Paired Samples t-Test:
 The paired samples t-test is used to compare the means of two related groups, such as before and after measurements of the same group. The null hypothesis is that the mean difference between the two groups is zero, while the alternative hypothesis is that the mean difference is different from zero.
 
 The formula for the paired samples t-test is:
 
-t = d̄ / (s/√n)
+$$
+t = \frac{\bar{d}}{s_d / \sqrt{n}}
+$$
 
-Where:
-d̄ is the mean difference between the two groups
-s is the standard deviation of the differences
-n is the sample size
+where
+- $\bar{d}$ = mean of differences, 
+- $s_d$ = standard deviation of differences, 
+- $n$ = sample size.
 
 The paired samples t-test assumes that the differences between the two groups are normally distributed.
 
-Interpretation:
+#### Interpretation:
 After calculating the t-value and degrees of freedom, the p-value can be obtained from the t-distribution table. If the p-value is less than the significance level, then the null hypothesis is rejected, indicating that there is a significant difference between the means of the two groups. If the p-value is greater than the significance level, then the null hypothesis cannot be rejected, indicating that there is not a significant difference between the means of the two groups.
 
 
 ---
-
 
 ## 2. ANOVA (Analysis of Variance) test
 
@@ -70,59 +79,150 @@ ANOVA (Analysis of Variance) is a statistical test used to determine whether the
 
 The ANOVA test is based on the F-statistic, which is calculated by dividing the variance between the groups by the variance within the groups. The F-statistic follows an F-distribution with degrees of freedom based on the number of groups and the number of observations.
 
-Here are the steps to perform an ANOVA test:
+More details on ANOVA is in chapter 8.
 
-1. Formulate the null and alternative hypotheses:
-    - H0: μ1 = μ2 = μ3 = ... = μk (all group means are equal)
-    - Ha: at least one group mean is different from the others
 
-2. Choose a significance level (α) and determine the degrees of freedom for the F-distribution:
-    - Degrees of freedom between groups: k - 1
-    - Degrees of freedom within groups: N - k, where N is the total number of observations
 
-3. Collect and organize the data into groups.
+## 4. Mann–Whitney U test
 
-4. Calculate the sum of squares between groups (SSbetween):
-    - SSbetween = ∑ni(x̄i - x̄)^2, 
-    
-    where ni is the number of observations in group i, x̄i is the mean of group i, and x̄ is the overall mean
+**Purpose:** Compare **medians** of two independent groups (nonparametric).
+**Formula:**
 
-5. Calculate the sum of squares within groups (SSwithin):
-    - SSwithin = ∑(xi - x̄i)^2, 
-    
-    where xi is the ith observation in group i
+$$
+U = n_1 n_2 + \frac{n_1 (n_1 + 1)}{2} - R_1
+$$
 
-6. Calculate the mean square between groups (MSbetween):
-    - MSbetween = SSbetween / (k - 1)
+where $R_1$ is the sum of ranks for group 1.
+Used when data are **ordinal or non-normal**.
 
-7. Calculate the mean square within groups (MSwithin):
-    - MSwithin = SSwithin / (N - k)
+---
 
-8. Calculate the F-statistic:
-    - F = MSbetween / MSwithin
+## 5. Kruskal–Wallis test
 
-9. Calculate the p-value associated with the F-statistic using a table of F-distributions or a statistical software package.
+**Purpose:** Compare **three or more independent groups** (nonparametric ANOVA).
+**Formula:**
 
-10. Compare the p-value to the significance level. If the p-value is less than the significance level, reject the null hypothesis and conclude that there is a significant difference between the means of at least two groups. If the p-value is greater than the significance level, fail to reject the null hypothesis and conclude that there is not enough evidence to suggest a significant difference between the means of any of the groups.
+$$
+H = \frac{12}{N(N+1)} \sum \frac{R_i^2}{n_i} - 3(N+1)
+$$
 
-**Example:** Here's an example of an ANOVA test:
+where $R_i$ = rank sum of group $i$, $n_i$ = sample size, $N$ = total sample size.
+Follows chi-square distribution with $k-1$ degrees of freedom.
 
-Suppose we want to compare the average test scores of students in three different schools (A, B, and C). We randomly sample 10 students from each school and obtain the following data:
+---
 
-- **School A:** 75, 80, 82, 85, 88, 90, 92, 94, 95, 98
-- **School B:** 70, 75, 77, 80, 83, 85, 87, 88, 90, 92
-- **School C:** 65, 70, 72, 75, 78, 80, 82, 84, 85, 88
+## 6. Chi-square test of independence
 
-1. Formulate the null and alternative hypotheses:
-    - H0: μA = μB = μC
-    - Ha: at least one group mean is different from the others
+**Purpose:** Test **association between two categorical variables**.
+**Formula:**
 
-2. Choose a significance level (α) and determine the degrees of freedom for the F-distribution:
-    - α = 0.05
-    - Degrees of freedom between groups: 3 - 1 = 2
-    - Degrees of freedom within groups: 30 - 3 = 27
+$$
+\chi^2 = \sum \frac{(O - E)^2}{E}
+$$
 
-3. Collect and organize the data into groups.
+where $O$ = observed frequency, $E$ = expected frequency.
+Larger χ² → stronger evidence against independence.
 
-4. Calculate the sum of squares between groups (SSbetween):
-    - SSbetween
+---
+
+## 7. Fisher’s Exact Test
+
+**Purpose:** Exact test for association between **two categorical variables** when sample sizes are small.
+**No formula approximation:** Uses combinatorial probability to compute the exact p-value from contingency tables.
+
+---
+
+## 8. Pearson Correlation (r)
+
+**Purpose:** Measure **linear relationship** between two continuous variables.
+**Formula:**
+
+$$
+r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}}
+$$
+
+Range: -1 (perfect negative) → +1 (perfect positive).
+
+---
+
+## 9. Spearman Rank Correlation (ρ)
+
+**Purpose:** Measure **monotonic relationship** using **ranks**.
+**Formula:**
+
+$$
+\rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}
+$$
+
+where $d_i$ = rank differences.
+
+---
+
+## 10. Linear Regression
+
+**Purpose:** Model relationship between **dependent variable (Y)** and **independent variable(s) (X)**.
+**Model:**
+
+$$
+Y = \beta_0 + \beta_1 X + \varepsilon
+$$
+
+where β₀ = intercept, β₁ = slope, and ε = random error.
+Objective: Minimize
+
+$$
+\sum (Y_i - \hat{Y_i})^2
+$$
+
+(least squares).
+
+---
+
+## 11. Logistic Regression
+
+**Purpose:** Model probability of a **binary outcome**.
+**Model:**
+
+$$
+\ln\left(\frac{p}{1-p}\right) = \beta_0 + \beta_1 X
+$$
+
+where $p$ = probability of success (Y=1).
+Uses **maximum likelihood estimation**.
+
+---
+
+## 12. Chi-square Goodness-of-Fit Test
+
+**Purpose:** Test if observed frequencies match expected theoretical distribution.
+**Formula:**
+
+$$
+\chi^2 = \sum \frac{(O_i - E_i)^2}{E_i}
+$$
+
+where $E_i$ are expected counts based on hypothesis.
+
+---
+
+## 13. Levene’s Test / Bartlett’s Test
+
+**Purpose:** Test **equality of variances** across groups.
+
+* **Levene’s:** Robust to non-normal data.
+* **Bartlett’s:** More sensitive, assumes normality.
+
+**Levene’s Formula (simplified):**
+
+$$
+W = \frac{(N - k)}{(k - 1)} \frac{\sum n_i (Z_{i\cdot} - Z_{\cdot\cdot})^2}{\sum \sum (Z_{ij} - Z_{i\cdot})^2}
+$$
+
+where $Z_{ij} = |Y_{ij} - \text{median}(Y_i)|$.
+
+---
+
+> ✅ **In short:** Each test answers a specific question —
+> “Are groups different?”, “Are variables related?”, or “Can one predict another?”
+> Always match your **data type**, **distribution**, and **research question** to the correct test.
+
