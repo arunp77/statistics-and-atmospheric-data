@@ -28,8 +28,6 @@ Some common measures of descriptive statistics include:
 
 Descriptive statistics are often used to summarize and describe data in a way that is easily understandable and interpretable. They can be used to make comparisons between groups, identify patterns or trends in the data, and to detect outliers or anomalies that may need further investigation.
 
-Descriptive statistics are commonly used in fields such as business, economics, psychology, sociology, and healthcare, among others. They are an important tool for making informed decisions and drawing meaningful conclusions from data.
-
 ---
 
 ## 1. Measures of central tendency
@@ -296,57 +294,6 @@ Skewness and kurtosis are two statistical measures used to describe the shape of
 
     It's important to note that kurtosis can only be interpreted in the context of the specific distribution being analyzed. A high or low kurtosis value does not necessarily indicate that the data are problematic or that any action needs to be taken. Rather, kurtosis can provide insight into the shape of the distribution and can help to identify potential issues with the data.
     
-
----
-
-
-# Probability distributions and hypothesis testing
-
-## Probability
-
-- Probability is a subject that deals with uncertainty. 
-- In everyday terminology, probability can be thought of as a numerical measure of the likelihood that a particular event will occur.
-- Probability values are assigned on a scale from `0` to `1`, with values near `0` indicating that an event is unlikely to occur and those near `1` indicating that an event is likely to take place.
-- Suppose that an event `E` can happen in `h` ways out of a total of `n` possible equally likely ways. Then the probability of occurrence of the event (called its success) is denoted by
-    
-    $p=Pr\{E\}=\frac{h}{n} ~~~~~~~~~~~~~~~$ (success probability)
-
-- The probability of non-occurrence of the event (called its failure) is denoted by
-
-    $𝑞=1−𝑝 \rightarrow 𝑝+𝑞=1 $
-
-### Conditional probability; Independent and dependent events
-
-- If $E_1$ and $E_2$ are two events, the probability that $E_2$ occurs given that $E_1$ has occurred is denoted by $Pr\{E_2|E_1\}$, or $Pr\{E_2 ~\text{given} ~E_1\}$, and is called the conditional probability of $E_2$ given that $E_1$ has occurred.
-
-- If the occurrence or non-occurrence of $E_1$ does not affect the probability of occurrence of $E_2$, then Pr{$E_2$ | $E_1$}=Pr{$E_2$} and we say that $E_1$ and $E_2$ are independent events, they are dependents.
-
-- If we denote by ( $E_1$ $E_2$) the event that "both $E_1$ and $E_2$ occur,’’ sometimes called a compound event, then
-
-    Pr{ $𝐸_1$ $𝐸_2$ } = Pr{ $𝐸_1$ } Pr{ $𝐸_2$ | $𝐸_1$ }
-
-- Similarly for three events $(𝐸_1 𝐸_2 𝐸_3)$ 
-
-    Pr{ $𝐸_1$ $𝐸_2$ $𝐸_3$ } = Pr{ $𝐸_1$ } Pr{ $𝐸_2$ | $𝐸_1$ } Pr{ $𝐸_3$ | $𝐸_2$ $𝐸_1$ }
-
-    If these events are independent, then 
-
-    Pr{ $𝐸_1$ $𝐸_2$ } = Pr{ $𝐸_1$ } Pr{ $𝐸_2$ }.
-
-    Similarly 
-
-    Pr{ $𝐸_1$ $𝐸_2$ $𝐸_3$}=Pr{ $𝐸_1$ } Pr{ $𝐸_2$ } Pr{ $𝐸_3$}.
-
-### Mutually exclusive events
-
-- Two or more events are called mutually exclusive if the occurrence of any one of them excludes the occurrence of the others. Thus if $E_1$ and $E_2$ are mutually exclusive events, then
-
-    Pr{ $𝐸_1$ $𝐸_2$ } = 0.
-
-- If $E_1 + E_2$ denotes the event that ‘‘either $E_1$ or $E_2$ or both occur’’, then
-
-    Pr{ $𝐸_1$ + $𝐸_2$ } = Pr{ $𝐸_1$ } + Pr{ $𝐸_2$ } − Pr{ $𝐸_1$ $𝐸_2$ }.
-
 
 ---
 

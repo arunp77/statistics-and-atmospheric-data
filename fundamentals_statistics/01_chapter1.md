@@ -19,39 +19,8 @@ Statistics is the branch of mathematics that deals with collecting, organizing, 
     - p-values & Significance Levels
     - Errors (Type I and Type II)
 
-- Statistics is used in a wide variety of applications, from determining the effectiveness of a new medical treatment to analyzing financial data to make investment decisions. It is an important tool for decision-making and problem-solving in many different fields.
+> The primary goal of statistics is to make inferences about a population based on a sample of data. This involves using various statistical methods and techniques to analyze the data and draw conclusions about the population. 
 
-- Understanding statistics is important for researchers, data analysts, and decision-makers who need to analyze and interpret data to make informed decisions.# Statistics <a id="1"></a>
-
-- Statistics is the branch of mathematics that deals with the collection, analysis, interpretation, presentation, and organization of data. It is a discipline that is used in many fields, including science, engineering, medicine, social sciences, and business.
-
-- The primary goal of statistics is to make inferences about a population based on a sample of data. This involves using various statistical methods and techniques to analyze the data and draw conclusions about the population. 
-
-- Statistics is a broad field that has many sub-disciplines or branches. Here are some of the major branches of statistics:
-
-    1. **Descriptive statistics:** This branch of statistics deals with summarizing and describing data from a sample or population using measures such as mean, median, mode, variance, standard deviation, and correlation.
-
-    2. **Inferential statistics:** This branch of statistics deals with making inferences or predictions about a population based on a sample of data using statistical hypothesis testing, confidence intervals, and regression analysis.
-
-    3. **Probability theory:** This branch of statistics deals with the mathematical study of random events and the likelihood of their occurrence.
-
-    4. **Biostatistics:** This branch of statistics is concerned with the analysis and interpretation of data related to health and medicine.
-
-    5. **Econometrics:** This branch of statistics deals with the application of statistical methods to economic data to model and analyze economic relationships.
-
-    6. **Psychometrics:** This branch of statistics deals with the design and analysis of tests and questionnaires to measure psychological traits and abilities.
-
-    7. **Spatial statistics:** This branch of statistics deals with the analysis of geospatial data to understand patterns and relationships in geographic space.
-
-    8. **Time series analysis:** This branch of statistics deals with the analysis of data collected over time to identify trends, patterns, and seasonality.
-
-    9. **Bayesian statistics:** This branch of statistics deals with the use of Bayesian methods to analyze and interpret data, which involves updating prior knowledge or beliefs based on new data.
-
-    10. **Machine learning:** This branch of statistics deals with the development of algorithms and models that can learn and make predictions from data, including supervised and unsupervised learning techniques.
-
-- Statistics is used in a wide variety of applications, from determining the effectiveness of a new medical treatment to analyzing financial data to make investment decisions. It is an important tool for decision-making and problem-solving in many different fields.
-
-- Understanding statistics is important for researchers, data analysts, and decision-makers who need to analyze and interpret data to make informed decisions.
 
 ## Population vs. Sample <a id="1.1"></a>
 
@@ -62,7 +31,7 @@ Statistics is the branch of mathematics that deals with collecting, organizing, 
 
 - **Example:** let's say we are interested in studying the average height of all adults in a certain country. The population in this case would be all adults in that country, while a sample would be a group of randomly selected adults from that country who we actually measure and collect data on.
 
-- It's important to note that the characteristics of a population can be inferred from the characteristics of a sample, but this requires appropriate sampling techniques and statistical analysis.
+### Difference between Population and sample
 
 |  | Population | Sample |
 | --- | --- | --- |
@@ -72,52 +41,6 @@ Statistics is the branch of mathematics that deals with collecting, organizing, 
 | Characteristics | Parameters of the population can be determined with complete accuracy. | Statistics of the sample can be used to make inferences about the parameters of the population. |
 | Importance | The ultimate goal of statistical inference is to make accurate statements about the population. | The sample is used to estimate characteristics of the population when it is impractical or impossible to study the entire population. |
 | Example | All dogs in a certain city. | A randomly selected group of 100 dogs from that city. |
-
-
-### Collecting data from a population and sample and Reasons for sampling
-
-Collecting data from a population involves gathering information about every individual, object or event that belongs to the group of interest, which can be very time-consuming, expensive, and sometimes even impossible. That's why researchers often use sampling, which involves collecting data from a subset of the population that is representative of the entire population.
-
-Sampling has several advantages, including:
-
-1. **Efficiency:** Collecting data from a sample is generally faster and less expensive than collecting data from the entire population.
-2. **Feasibility:** Sometimes it is impossible to study the entire population, so a sample provides a more practical way to study the population.
-3. **Accuracy:** If the sample is selected properly, the results can be just as accurate as if the entire population had been studied.
-4. **Accessibility:** Sampling is often the only way to study rare or inaccessible populations, such as endangered species, historical artifacts, or celestial bodies.
-
-However, sampling also has some potential drawbacks, including:
-
-1. **Sampling error:** The results of a sample may differ from the true values of the population due to random variation in the selection process.
-2. **Bias:** The sample may not be representative of the population if certain groups are over- or under-represented in the sample.
-3. **Cost:** Depending on the sampling method, collecting a sample can still be costly and time-consuming.
-
-To reduce the potential for bias and ensure that the sample is representative of the population, researchers often use random sampling techniques, such as simple random sampling, stratified sampling, cluster sampling, or systematic sampling. By selecting a sample that is representative of the population and collecting data in a systematic way, researchers can obtain accurate and reliable information about the population.
-
-### Population parameter vs. sample statistic
-
-In statistics, we use population parameters and sample statistics to describe the characteristics of a population and a sample, respectively.
-
-- **population parameter:** is a numerical value that describes a characteristic of the entire population. Examples of population parameters include the 
-    - population mean, 
-    - population standard deviation, 
-    - population proportion, etc. 
-
-These parameters are usually unknown, and we use statistical inference techniques to estimate them from a sample.
-
-- **Sample statistic:** On the other hand, a sample statistic is a numerical value that describes a characteristic of a sample. Examples of sample statistics include the 
-    - sample mean, 
-    - sample standard deviation, 
-    - sample proportion, etc. 
-
-    These statistics are used to estimate the population parameters.
-
-The key difference between population parameters and sample statistics is that population parameters are fixed values that describe the entire population, while sample statistics can vary from sample to sample and only describe the particular sample that was selected.
-
-**Example: 1** Suppose we are interested in studying the average height of all students in a school. The population parameter would be the true population mean height, which we cannot observe directly. To estimate this parameter, we would collect a sample of students and calculate the sample mean height. This sample mean height is the sample statistic, which can vary from sample to sample.
-
-**Example: 2** Another example is the proportion of voters who support a particular candidate in an election. The population parameter would be the true proportion of all eligible voters who support the candidate, while the sample statistic would be the proportion of voters who support the candidate in a particular sample of voters.
-
-In summary, population parameters are used to describe characteristics of the entire population, while sample statistics are used to estimate these characteristics from a sample.
 
 ## Sampling Methods
 
@@ -184,33 +107,3 @@ In summary, non-probability sampling methods are useful when it is difficult or 
 
 [Image reference](https://www.geeksforgeeks.org/data-science/non-probability-sampling/)
 
-
-
-## Types of statistics <a id="1.2"></a>
-
-There are two main types of statistics: 
-
-1. **Descriptive statistics:** Descriptive statistics involves the collection, organization, and presentation of data in a way that summarizes the main features of a data set. Some common descriptive statistics include 
-    - measures of central tendency (such as the mean, median, and mode) and 
-    - measures of variability (such as the range, variance, and standard deviation).
-
-2. **Inferential statistics:** Inferential statistics involves making inferences or drawing conclusions about a population based on a sample of data. This involves using various statistical techniques and methods to analyze the data and draw conclusions about the population. Some common inferential statistics techniques include 
-
-    - hypothesis testing, 
-    - confidence intervals, 
-    - regression analysis, 
-    - ANOVA (analysis of variance), and 
-    - correlation analysis.
-
-In addition to these two main types of statistics, there are also other types of statistics, such as:
-
-3. **Biostatistics:** Biostatistics is a specialized branch of statistics that deals with the analysis of data related to health and medicine.
-
-4. **Econometrics:** Econometrics is a specialized branch of statistics that deals with the analysis of economic data.
-
-5. **Social statistics:** Social statistics is a specialized branch of statistics that deals with the analysis of social data, such as demographics, crime rates, and education.
-
-6. **Business statistics:** Business statistics is a specialized branch of statistics that deals with the analysis of data related to business and finance.
-
-
-Overall, statistics is a broad and important field that has many different applications and types, including descriptive statistics, inferential statistics, biostatistics, econometrics, social statistics, and business statistics.
