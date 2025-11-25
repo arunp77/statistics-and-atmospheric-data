@@ -1,3 +1,7 @@
+---
+title: Introduction to Statistics in Atmospheric Research
+---
+
 # Chapter - 1 : Introduction to Statistics in Atmospheric Research
 
 ### 1. Why Statistics Matter in Atmospheric Science

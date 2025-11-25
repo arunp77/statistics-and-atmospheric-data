@@ -1,3 +1,6 @@
+---
+title: Statistics in Atmoshpheric research 
+---
 # Statistics in Atmoshpheric research 
 
 Chapter plan is as follows:
