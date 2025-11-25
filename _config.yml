@@ -1,0 +1,6 @@
+# _config.yml
+title: Statistics Study
+description: Fundamentals and applied atmospheric statistics
+theme: minima
+markdown: kramdown
+permalink: /:path/
