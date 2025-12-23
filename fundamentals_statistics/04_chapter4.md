@@ -22,7 +22,7 @@ The central limit theorem (CLT) has many important applications in statistics an
 
 3. **Machine learning:** The CLT is used in many machine learning algorithms that require the assumption of normality, such as linear regression and logistic regression. In these algorithms, the CLT is used to justify the assumption that the errors or residuals of the model are normally distributed.
 
-**Forumla** The formula for the CLT depends on the specific population distribution and the sample size. In general, if $X$ is a random variable with mean $\mu$ and standard deviation $\sigma$, then the distribution of the sample mean $\mu_X$ of a random sample of size $n$ from $X$ approaches a normal distribution with mean $\mu$ and standard deviation $\sigma/\sqrt{n}$ as $n$ gets larger. This can be expressed mathematically as:
+**Forumla** The formula for the CLT depends on the specific population distribution and the sample size. In general, if $X$ is a random variable with mean $\mu$ and standard deviation $\sigma$, then the distribution of the sample mean \(\mu_X\) of a random sample of size \(n\) from $X$ approaches a normal distribution with mean $\mu$ and standard deviation $\sigma/\sqrt{n}$ as $n$ gets larger. This can be expressed mathematically as:
 
 $$\frac{\mu_X - \mu}{\sigma/\sqrt{n}}\sim N(0,1)$$
 
@@ -93,5 +93,6 @@ Therefore, the critical value $z^*$ for a 95% confidence level is 1.96.
     - $x$ = individual value
     - $\mu$ = mean
     - $\sigma$ = standard deviation
+
 
 
