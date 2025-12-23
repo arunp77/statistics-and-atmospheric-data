@@ -81,8 +81,7 @@ Therefore, the critical value $z^*$ for a 95% confidence level is 1.96.
     - A z score of zero means that your x value is equal to the mean.
 
     
-
-    [Image](https://raw.githubusercontent.com/arunp77/statistics-and-atmospheric-data/main/images/snd.png)
+  <img src="https://raw.githubusercontent.com/arunp77/statistics-and-atmospheric-data/main/images/snd.png" width="650" height="450" />
 
     [☞(For image Reference, click here)](https://www.scribbr.com/statistics/normal-distribution/)
 
@@ -94,4 +93,5 @@ Therefore, the critical value $z^*$ for a 95% confidence level is 1.96.
     - $x$ = individual value
     - $\mu$ = mean
     - $\sigma$ = standard deviation
+
 
